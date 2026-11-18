@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Courses & Curriculum - CodeRwanda Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50 transition">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center space-x-2.5 group">
+                <div
+                    class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white shadow-md shadow-indigo-200 group-hover:scale-105 transition">
+                    <span class="text-xl">♾️</span>
+                </div>
+                <div>
+                    <span class="text-lg font-bold text-slate-900 tracking-tight block leading-tight">DevOps<span
+                            class="text-indigo-600">Learn</span></span>
+                    <span class="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">CodeRwanda
+                        Tech</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="../index.html" class="text-slate-600 hover:text-indigo-600 transition">Home</a>
+                <a href="index.html" class="text-indigo-600 font-semibold flex items-center space-x-1">
+                    <span>Courses</span>
+                    <span
+                        class="px-1.5 py-0.5 text-[10px] bg-indigo-100 text-indigo-700 rounded-full font-bold">8</span>
+                </a>
+                <a href="../about.html" class="text-slate-600 hover:text-indigo-600 transition">About Us</a>
+                <a href="../contact.html" class="text-slate-600 hover:text-indigo-600 transition">Contact</a>
+            </nav>
+
+            <div class="hidden sm:flex items-center space-x-3">
+                <a href="#courses-grid"
+                    class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-xs font-semibold shadow-sm shadow-indigo-200 hover:shadow-md transition">
+                    Explore Catalog
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button id="mobileMenuBtn"
+                class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none"
+                aria-label="Toggle Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 py-3 space-y-2">
+            <a href="../index.html"
+                class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Home</a>
+            <a href="index.html"
+                class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 bg-indigo-50 font-semibold">Courses</a>
+            <a href="../about.html"
+                class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">About Us</a>
+            <a href="../contact.html"
+                class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow">
+        <!-- Hero Header -->
+        <section
+            class="relative bg-gradient-to-b from-indigo-50/70 via-white to-slate-50 border-b border-slate-200/80 pt-12 pb-16 overflow-hidden">
+            <div
+                class="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Breadcrumbs -->
+                <nav class="flex items-center space-x-2 text-xs text-slate-500 mb-6 font-medium">
+                    <a href="../index.html" class="hover:text-indigo-600 transition">Home</a>
+                    <span>/</span>
+                    <span class="text-indigo-600 font-semibold">Courses</span>
+                </nav>
+
+                <div class="max-w-3xl">
+                    <div
+                        class="inline-flex items-center space-x-2 bg-indigo-100/80 border border-indigo-200 text-indigo-800 text-xs font-semibold px-3 py-1 rounded-full mb-4">
+                        <span class="flex h-2 w-2 rounded-full bg-indigo-600 animate-pulse"></span>
+                        <span>DevOps Engineering Curriculum</span>
+                    </div>
+                    <h1
+                        class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        Hands-On DevOps Courses for <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">Modern
+                            Engineers</span>
+                    </h1>
+                    <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+                        Master the industry's most in-demand delivery tools — from planning sprints in
+                        <strong>Jira</strong>, building portable containers in <strong>Docker</strong>, to continuous
+                        integration with <strong>Jenkins</strong> and cloud orchestration.
+                    </p>
+                </div>
+
+                <!-- Stats Highlights -->
+                <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl pt-6 border-t border-slate-200/80">
+                    <div class="bg-white/80 backdrop-blur-sm p-4 rounded-xl border border-slate-200 shadow-sm">
+                        <div class="text-2xl font-bold text-slate-900">8 Courses</div>
+                        <div class="text-xs text-slate-500 font-medium mt-0.5">Core DevOps Tooling</div>
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-sm p-4 rounded-xl border border-slate-200 shadow-sm">
+                        <div class="text-2xl font-bold text-indigo-600">40+ Labs</div>
+                        <div class="text-xs text-slate-500 font-medium mt-0.5">Hands-On Practice</div>
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-sm p-4 rounded-xl border border-slate-200 shadow-sm">
+                        <div class="text-2xl font-bold text-emerald-600">100% Free</div>
+                        <div class="text-xs text-slate-500 font-medium mt-0.5">Community Driven</div>
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-sm p-4 rounded-xl border border-slate-200 shadow-sm">
+                        <div class="text-2xl font-bold text-slate-900">Self-Paced</div>
+                        <div class="text-xs text-slate-500 font-medium mt-0.5">Step-by-step Modules</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search, Filter & Courses Section -->
+        <section id="courses-grid" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Filter & Search Controls -->
+            <div class="bg-white p-4 sm:p-6 rounded-2xl border border-slate-200 shadow-sm mb-10">
+                <div class="flex flex-col lg:flex-row gap-4 lg:items-center lg:justify-between">
+                    <!-- Search input -->
+                    <div class="relative flex-1 max-w-md">
+                        <div
+                            class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </div>
+                        <input type="text" id="courseSearch"
+                            placeholder="Search course by name, tool, or keyword (e.g. Docker, Jenkins)..."
+                            class="w-full pl-10 pr-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition placeholder-slate-400">
+                    </div>
+
+                    <!-- Category Pills -->
+                    <div class="flex flex-wrap gap-2 text-xs font-semibold" id="filterContainer">
+                        <button
+                            class="filter-btn active px-3.5 py-2 rounded-lg bg-indigo-600 text-white shadow-sm transition"
+                            data-category="all">
+                            All Topics
+                        </button>
+                        <button
+                            class="filter-btn px-3.5 py-2 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900 transition"
+                            data-category="containers">
+                            Containers (Docker)
+                        </button>
+                        <button
+                            class="filter-btn px-3.5 py-2 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900 transition"
+                            data-category="cicd">
+                            CI/CD (Jenkins)
+                        </button>
+                        <button
+                            class="filter-btn px-3.5 py-2 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900 transition"
+                            data-category="agile">
+                            Agile & Planning (Jira)
+                        </button>
+                        <button
+                            class="filter-btn px-3.5 py-2 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900 transition"
+                            data-category="cloud">
+                            Cloud & K8s
+                        </button>
+                        <button
+                            class="filter-btn px-3.5 py-2 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900 transition"
+                            data-category="linux">
+                            Linux & Monitoring
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty Search Notice -->
+            <div id="noResults" class="hidden text-center py-16 bg-white rounded-2xl border border-slate-200">
+                <span class="text-4xl">🔍</span>
+                <h3 class="text-lg font-bold text-slate-800 mt-3">No matching courses found</h3>
+                <p class="text-sm text-slate-500 mt-1">Try adjusting your search terms or selecting "All Topics".</p>
+                <button onclick="resetFilters()"
+                    class="mt-4 text-xs font-semibold text-indigo-600 hover:text-indigo-800 underline">Reset all
+                    filters</button>
+            </div>
+
+            <!-- Course Cards Grid -->
+            <div id="coursesList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- 1. DOCKER COURSE -->
+                <div class="course-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-indigo-300 transition-all duration-200 flex flex-col justify-between overflow-hidden group"
+                    data-category="containers" data-title="docker containerization containers compose dockerfile">
+                    <div class="p-6">
+                        <!-- Top Badges -->
+                        <div class="flex items-center justify-between mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center text-2xl group-hover:scale-110 transition">
+                                🐳
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200">
+                                    Beginner
+                                </span>
+                                <span
+                                    class="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-slate-100 text-slate-600">
+                                    4 Hours
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Title & Description -->
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition">
+                            Docker & Containerization Fundamentals
+                        </h3>
+                        <p class="text-slate-600 text-sm mt-2.5 line-clamp-3 leading-relaxed">
+                            Learn how to package applications and their dependencies into lightweight, immutable
+                            containers. Build custom Dockerfiles, manage multi-container apps with Docker Compose, and
+                            handle persistent volumes.
+                        </p>
+
+                        <!-- Key Skills Tags -->
+                        <div class="mt-4 flex flex-wrap gap-1.5">
+                            <span
+                                class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Dockerfile</span>
+                            <span class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Docker
+                                Compose</span>
+                            <span
+                                class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Volumes</span>
+                            <span
+                                class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Networking</span>
+                        </div>
+
+                        <!-- Modules List -->
+                        <div class="mt-5 pt-4 border-t border-slate-100 text-xs text-slate-500 space-y-1.5">
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 1: Containers
+                                vs Virtual Machines</div>
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 2: Writing
+                                Production Dockerfiles</div>
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 3:
+                                Multi-Stage Builds & Compose</div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Action -->
+                    <div class="px-6 py-4 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-500">6 Modules • 10 Labs</span>
+                        <button onclick="openCourseModal('docker')"
+                            class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-800 group-hover:translate-x-0.5 transition">
+                            View Syllabus &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. JENKINS COURSE -->
+                <div class="course-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-indigo-300 transition-all duration-200 flex flex-col justify-between overflow-hidden group"
+                    data-category="cicd"
+                    data-title="jenkins ci cd pipeline continuous integration automation build test deploy">
+                    <div class="p-6">
+                        <!-- Top Badges -->
+                        <div class="flex items-center justify-between mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 border border-amber-100 flex items-center justify-center text-2xl group-hover:scale-110 transition">
+                                ⚙️
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider rounded-md bg-blue-50 text-blue-700 border border-blue-200">
+                                    Intermediate
+                                </span>
+                                <span
+                                    class="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-slate-100 text-slate-600">
+                                    5.5 Hours
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Title & Description -->
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition">
+                            Jenkins CI/CD Automation Pipelines
+                        </h3>
+                        <p class="text-slate-600 text-sm mt-2.5 line-clamp-3 leading-relaxed">
+                            Master continuous integration and delivery with Jenkins. Automate code builds, run automated
+                            unit tests, create Declarative Jenkinsfiles, and trigger builds using GitHub webhooks.
+                        </p>
+
+                        <!-- Key Skills Tags -->
+                        <div class="mt-4 flex flex-wrap gap-1.5">
+                            <span
+                                class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Jenkinsfile</span>
+                            <span class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">CI/CD
+                                Stages</span>
+                            <span class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">GitHub
+                                Webhooks</span>
+                            <span class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Docker
+                                Agents</span>
+                        </div>
+
+                        <!-- Modules List -->
+                        <div class="mt-5 pt-4 border-t border-slate-100 text-xs text-slate-500 space-y-1.5">
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 1: Jenkins
+                                Server Setup & Architecture</div>
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 2:
+                                Declarative Pipeline Syntax</div>
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 3: Automated
+                                Testing & Deployment</div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Action -->
+                    <div class="px-6 py-4 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-500">7 Modules • 8 Labs</span>
+                        <button onclick="openCourseModal('jenkins')"
+                            class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-800 group-hover:translate-x-0.5 transition">
+                            View Syllabus &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3. JIRA COURSE -->
+                <div class="course-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-indigo-300 transition-all duration-200 flex flex-col justify-between overflow-hidden group"
+                    data-category="agile"
+                    data-title="jira agile sprint scrum kanban backlog ticket issue tracking devops">
+                    <div class="p-6">
+                        <!-- Top Badges -->
+                        <div class="flex items-center justify-between mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center text-2xl group-hover:scale-110 transition">
+                                📋
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200">
+                                    Beginner
+                                </span>
+                                <span
+                                    class="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-slate-100 text-slate-600">
+                                    3 Hours
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Title & Description -->
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition">
+                            Jira & Agile Sprint Management
+                        </h3>
+                        <p class="text-slate-600 text-sm mt-2.5 line-clamp-3 leading-relaxed">
+                            Bridge project management and technical engineering. Learn how to create user stories,
+                            manage epics, execute Scrum sprints, configure Kanban boards, and link tickets to Git branch
+                            names.
+                        </p>
+
+                        <!-- Key Skills Tags -->
+                        <div class="mt-4 flex flex-wrap gap-1.5">
+                            <span class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Scrum
+                                Boards</span>
+                            <span
+                                class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Kanban</span>
+                            <span class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Sprint
+                                Planning</span>
+                            <span class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Git
+                                Smart Commits</span>
+                        </div>
+
+                        <!-- Modules List -->
+                        <div class="mt-5 pt-4 border-t border-slate-100 text-xs text-slate-500 space-y-1.5">
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 1: Agile
+                                Concepts & Jira Basics</div>
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 2: Epics,
+                                User Stories & Backlog</div>
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 3: Connecting
+                                Jira with GitHub</div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Action -->
+                    <div class="px-6 py-4 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-500">5 Modules • Practical</span>
+                        <button onclick="openCourseModal('jira')"
+                            class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-800 group-hover:translate-x-0.5 transition">
+                            View Syllabus &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4. KUBERNETES COURSE -->
+                <div class="course-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-indigo-300 transition-all duration-200 flex flex-col justify-between overflow-hidden group"
+                    data-category="cloud"
+                    data-title="kubernetes k8s orchestration pods deployments services ingress helm cloud">
+                    <div class="p-6">
+                        <!-- Top Badges -->
+                        <div class="flex items-center justify-between mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 border border-indigo-100 flex items-center justify-center text-2xl group-hover:scale-110 transition">
+                                ☸️
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider rounded-md bg-purple-50 text-purple-700 border border-purple-200">
+                                    Advanced
+                                </span>
+                                <span
+                                    class="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-slate-100 text-slate-600">
+                                    6.5 Hours
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Title & Description -->
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition">
+                            Kubernetes (K8s) Orchestration
+                        </h3>
+                        <p class="text-slate-600 text-sm mt-2.5 line-clamp-3 leading-relaxed">
+                            Take containerization to production scale. Learn Pods, Deployments, Services, ConfigMaps,
+                            Secrets, Ingress routing, and auto-scaling containerized workloads.
+                        </p>
+
+                        <!-- Key Skills Tags -->
+                        <div class="mt-4 flex flex-wrap gap-1.5">
+                            <span class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Pods &
+                                Deployments</span>
+                            <span
+                                class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Services
+                                & Ingress</span>
+                            <span
+                                class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">kubectl</span>
+                            <span class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Helm
+                                Charts</span>
+                        </div>
+
+                        <!-- Modules List -->
+                        <div class="mt-5 pt-4 border-t border-slate-100 text-xs text-slate-500 space-y-1.5">
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 1: K8s
+                                Architecture & Minikube</div>
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 2: Writing
+                                Declarative YAML Manifests</div>
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 3: Networking
+                                & Service Mesh Intro</div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Action -->
+                    <div class="px-6 py-4 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-500">8 Modules • 12 Labs</span>
+                        <button onclick="openCourseModal('kubernetes')"
+                            class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-800 group-hover:translate-x-0.5 transition">
+                            View Syllabus &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 5. GIT & GITHUB COURSE -->
+                <div class="course-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-indigo-300 transition-all duration-200 flex flex-col justify-between overflow-hidden group"
+                    data-category="agile"
+                    data-title="git github version control branching pr pull request rebase merge">
+                    <div class="p-6">
+                        <!-- Top Badges -->
+                        <div class="flex items-center justify-between mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-rose-50 text-rose-600 border border-rose-100 flex items-center justify-center text-2xl group-hover:scale-110 transition">
+                                🐙
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200">
+                                    Beginner
+                                </span>
+                                <span
+                                    class="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-slate-100 text-slate-600">
+                                    3 Hours
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Title & Description -->
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition">
+                            Git & GitHub for DevOps Teams
+                        </h3>
+                        <p class="text-slate-600 text-sm mt-2.5 line-clamp-3 leading-relaxed">
+                            Master professional version control workflows: trunk-based development, branch protection,
+                            handling merge conflicts, pull request reviews, and GitHub Actions triggers.
+                        </p>
+
+                        <!-- Key Skills Tags -->
+                        <div class="mt-4 flex flex-wrap gap-1.5">
+                            <span
+                                class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">GitFlow</span>
+                            <span class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Rebase
+                                vs Merge</span>
+                            <span class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Pull
+                                Requests</span>
+                            <span class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Branch
+                                Protection</span>
+                        </div>
+
+                        <!-- Modules List -->
+                        <div class="mt-5 pt-4 border-t border-slate-100 text-xs text-slate-500 space-y-1.5">
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 1: Core
+                                Commands & Undoing Mistakes</div>
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 2: Team
+                                Collaboration Strategies</div>
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 3: Continuous
+                                Integration Integration</div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Action -->
+                    <div class="px-6 py-4 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-500">4 Modules • 6 Labs</span>
+                        <button onclick="openCourseModal('git')"
+                            class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-800 group-hover:translate-x-0.5 transition">
+                            View Syllabus &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 6. LINUX & BASH COURSE -->
+                <div class="course-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-indigo-300 transition-all duration-200 flex flex-col justify-between overflow-hidden group"
+                    data-category="linux"
+                    data-title="linux bash shell terminal scripting cron ssh systemd admin sysadmin">
+                    <div class="p-6">
+                        <!-- Top Badges -->
+                        <div class="flex items-center justify-between mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center text-2xl group-hover:scale-110 transition">
+                                🐧
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200">
+                                    Beginner
+                                </span>
+                                <span
+                                    class="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-slate-100 text-slate-600">
+                                    3.5 Hours
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Title & Description -->
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition">
+                            Linux CLI & Shell Automation
+                        </h3>
+                        <p class="text-slate-600 text-sm mt-2.5 line-clamp-3 leading-relaxed">
+                            The backbone of server engineering. Learn systemd unit files, process management, log
+                            inspection (journalctl), user permissions, SSH keys, cron jobs, and writing reusable Bash
+                            scripts.
+                        </p>
+
+                        <!-- Key Skills Tags -->
+                        <div class="mt-4 flex flex-wrap gap-1.5">
+                            <span class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Bash
+                                Scripting</span>
+                            <span
+                                class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Systemd</span>
+                            <span class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Cron
+                                Automation</span>
+                            <span class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">SSH &
+                                Security</span>
+                        </div>
+
+                        <!-- Modules List -->
+                        <div class="mt-5 pt-4 border-t border-slate-100 text-xs text-slate-500 space-y-1.5">
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 1: Essential
+                                Server Navigation</div>
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 2: Writing
+                                Automation Scripts</div>
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 3: Managing
+                                Daemon Services</div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Action -->
+                    <div class="px-6 py-4 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-500">5 Modules • Practical</span>
+                        <button onclick="openCourseModal('linux')"
+                            class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-800 group-hover:translate-x-0.5 transition">
+                            View Syllabus &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 7. TERRAFORM COURSE -->
+                <div class="course-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-indigo-300 transition-all duration-200 flex flex-col justify-between overflow-hidden group"
+                    data-category="cloud"
+                    data-title="terraform iac infrastructure as code cloud aws cloudformation hcl">
+                    <div class="p-6">
+                        <!-- Top Badges -->
+                        <div class="flex items-center justify-between mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 border border-purple-100 flex items-center justify-center text-2xl group-hover:scale-110 transition">
+                                🏗️
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider rounded-md bg-blue-50 text-blue-700 border border-blue-200">
+                                    Intermediate
+                                </span>
+                                <span
+                                    class="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-slate-100 text-slate-600">
+                                    5 Hours
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Title & Description -->
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition">
+                            Terraform & Infrastructure as Code
+                        </h3>
+                        <p class="text-slate-600 text-sm mt-2.5 line-clamp-3 leading-relaxed">
+                            Define, provision, and version infrastructure safely. Write declarative HCL code for cloud
+                            providers, manage remote states, plan and apply changes, and avoid configuration drift.
+                        </p>
+
+                        <!-- Key Skills Tags -->
+                        <div class="mt-4 flex flex-wrap gap-1.5">
+                            <span class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">HCL
+                                Syntax</span>
+                            <span class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">State
+                                Management</span>
+                            <span
+                                class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Modules</span>
+                            <span
+                                class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Terraform
+                                Plan</span>
+                        </div>
+
+                        <!-- Modules List -->
+                        <div class="mt-5 pt-4 border-t border-slate-100 text-xs text-slate-500 space-y-1.5">
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 1: IaC
+                                Principles & Providers</div>
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 2: Variables,
+                                Outputs & Modules</div>
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 3: Locking &
+                                Remote Backends</div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Action -->
+                    <div class="px-6 py-4 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-500">6 Modules • 8 Labs</span>
+                        <button onclick="openCourseModal('terraform')"
+                            class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-800 group-hover:translate-x-0.5 transition">
+                            View Syllabus &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 8. PROMETHEUS & GRAFANA COURSE -->
+                <div class="course-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-indigo-300 transition-all duration-200 flex flex-col justify-between overflow-hidden group"
+                    data-category="linux"
+                    data-title="prometheus grafana monitoring metrics alertmanager observability logs">
+                    <div class="p-6">
+                        <!-- Top Badges -->
+                        <div class="flex items-center justify-between mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-orange-50 text-orange-600 border border-orange-100 flex items-center justify-center text-2xl group-hover:scale-110 transition">
+                                📊
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider rounded-md bg-blue-50 text-blue-700 border border-blue-200">
+                                    Intermediate
+                                </span>
+                                <span
+                                    class="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-slate-100 text-slate-600">
+                                    4 Hours
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Title & Description -->
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition">
+                            Observability: Prometheus & Grafana
+                        </h3>
+                        <p class="text-slate-600 text-sm mt-2.5 line-clamp-3 leading-relaxed">
+                            Monitor infrastructure health in real time. Collect metrics with Node Exporter, query
+                            time-series data using PromQL, build visual dashboards in Grafana, and configure automated
+                            alerts.
+                        </p>
+
+                        <!-- Key Skills Tags -->
+                        <div class="mt-4 flex flex-wrap gap-1.5">
+                            <span
+                                class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">PromQL</span>
+                            <span
+                                class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Grafana
+                                Dashboards</span>
+                            <span class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Node
+                                Exporter</span>
+                            <span
+                                class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Alerting</span>
+                        </div>
+
+                        <!-- Modules List -->
+                        <div class="mt-5 pt-4 border-t border-slate-100 text-xs text-slate-500 space-y-1.5">
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 1: Metrics,
+                                Logs & Traces Overview</div>
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 2: Writing
+                                PromQL Queries</div>
+                            <div class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Mod 3: Alert
+                                Rules & Notifications</div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Action -->
+                    <div class="px-6 py-4 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-500">5 Modules • 6 Labs</span>
+                        <button onclick="openCourseModal('monitoring')"
+                            class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-800 group-hover:translate-x-0.5 transition">
+                            View Syllabus &rarr;
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Recommended Learning Pathway Section -->
+        <section class="bg-white border-y border-slate-200 py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-indigo-600 font-bold text-xs uppercase tracking-wider">Recommended
+                        Progression</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">The DevOps Engineer Path</h2>
+                    <p class="text-slate-500 text-sm mt-2">Follow this sequential roadmap to build a solid,
+                        industry-standard foundation from scratch.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
+                    <!-- Step 1 -->
+                    <div
+                        class="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-center relative group hover:border-indigo-300 transition">
+                        <div
+                            class="w-10 h-10 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center mx-auto text-sm mb-3">
+                            1</div>
+                        <h4 class="font-bold text-slate-900 text-sm">Plan (Jira)</h4>
+                        <p class="text-xs text-slate-500 mt-1">Organize sprints, backlog issues, and agile deliverables.
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div
+                        class="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-center relative group hover:border-indigo-300 transition">
+                        <div
+                            class="w-10 h-10 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center mx-auto text-sm mb-3">
+                            2</div>
+                        <h4 class="font-bold text-slate-900 text-sm">Code (Git)</h4>
+                        <p class="text-xs text-slate-500 mt-1">Branching strategies, pull requests, and commit tagging.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div
+                        class="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-center relative group hover:border-indigo-300 transition">
+                        <div
+                            class="w-10 h-10 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center mx-auto text-sm mb-3">
+                            3</div>
+                        <h4 class="font-bold text-slate-900 text-sm">Package (Docker)</h4>
+                        <p class="text-xs text-slate-500 mt-1">Create portable images with Dockerfile and Compose.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div
+                        class="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-center relative group hover:border-indigo-300 transition">
+                        <div
+                            class="w-10 h-10 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center mx-auto text-sm mb-3">
+                            4</div>
+                        <h4 class="font-bold text-slate-900 text-sm">Automate (Jenkins)</h4>
+                        <p class="text-xs text-slate-500 mt-1">Automate build, test, and release CI/CD pipelines.</p>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div
+                        class="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-center relative group hover:border-indigo-300 transition">
+                        <div
+                            class="w-10 h-10 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center mx-auto text-sm mb-3">
+                            5</div>
+                        <h4 class="font-bold text-slate-900 text-sm">Operate (K8s & Mon)</h4>
+                        <p class="text-xs text-slate-500 mt-1">Scale containers and monitor performance 24/7.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Callout -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div
+                class="bg-gradient-to-r from-indigo-900 via-indigo-800 to-slate-900 rounded-3xl p-8 sm:p-12 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="max-w-xl">
+                    <span
+                        class="inline-block py-1 px-3 bg-indigo-700/60 text-indigo-200 rounded-full text-xs font-semibold uppercase tracking-wider mb-3">
+                        Learn by doing
+                    </span>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Need help getting your environment
+                        running?</h3>
+                    <p class="text-indigo-200 text-sm mt-3 leading-relaxed">
+                        Our Docker and Jenkins courses include ready-to-run <code>compose.yaml</code> files so you can
+                        practice locally on Windows, macOS, or Linux in minutes.
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                    <button onclick="openCourseModal('docker')"
+                        class="bg-white text-indigo-900 hover:bg-slate-100 font-bold px-6 py-3 rounded-xl text-sm transition shadow text-center">
+                        Start with Docker
+                    </button>
+                    <a href="../contact.html"
+                        class="border border-indigo-400/50 hover:bg-indigo-700/50 text-white font-semibold px-6 py-3 rounded-xl text-sm transition text-center">
+                        Ask a Question
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Detailed Course Syllabus & Cheatsheet -->
+    <div id="courseModal"
+        class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div
+            class="bg-white rounded-3xl border border-slate-200 max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative animate-in fade-in zoom-in-95 duration-150">
+            <!-- Modal Header -->
+            <div
+                class="p-6 border-b border-slate-200 sticky top-0 bg-white/95 backdrop-blur-sm z-10 flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <span id="modalIcon" class="text-3xl">🐳</span>
+                    <div>
+                        <h3 id="modalTitle" class="text-xl font-bold text-slate-900">Course Syllabus</h3>
+                        <p id="modalSubtitle" class="text-xs text-slate-500 font-medium">Hands-on Curriculum & Cheat
+                            Sheet</p>
+                    </div>
+                </div>
+                <button onclick="closeCourseModal()"
+                    class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center font-bold text-sm">
+                    ✕
+                </button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="p-6 space-y-6">
+                <!-- Overview -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">About This Course</h4>
+                    <p id="modalDesc" class="text-sm text-slate-600 leading-relaxed"></p>
+                </div>
+
+                <!-- Syllabus Modules -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Module Curriculum</h4>
+                    <div id="modalSyllabus" class="space-y-2"></div>
+                </div>
+
+                <!-- Hands-on CLI Cheatsheet -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Essential Quick Commands
+                        </h4>
+                        <span class="text-[10px] text-slate-400">Run in your terminal</span>
+                    </div>
+                    <pre
+                        class="bg-slate-900 text-emerald-400 p-4 rounded-xl text-xs font-mono overflow-x-auto shadow-inner"><code id="modalCommands"></code></pre>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-4 bg-slate-50 border-t border-slate-200 rounded-b-3xl flex items-center justify-between">
+                <span class="text-xs text-slate-500">Ready to build your first project?</span>
+                <div class="flex space-x-2">
+                    <button onclick="closeCourseModal()"
+                        class="px-4 py-2 text-xs font-medium text-slate-600 hover:bg-slate-200 rounded-lg">Close</button>
+                    <a href="../contact.html"
+                        class="px-4 py-2 text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition shadow-sm">Join
+                        Study Group</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between text-sm gap-4">
+                <div class="flex items-center space-x-2">
+                    <div
+                        class="w-7 h-7 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-xs font-bold">
+                        ♾️</div>
+                    <p>&copy; 2026 DevOps Learn Hub by <span class="text-white font-semibold">CodeRwanda Tech</span>.
+                        All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6 text-xs sm:text-sm">
+                    <a href="../index.html" class="hover:text-white transition">Home</a>
+                    <a href="index.html" class="text-indigo-400 font-semibold hover:text-white transition">Courses</a>
+                    <a href="../about.html" class="hover:text-white transition">About</a>
+                    <a href="../contact.html" class="hover:text-white transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Client Scripts for Filtering, Search, and Modals -->
+    <script>
+        // Course Data for Modal Previews
+        const coursesData = {
+            docker: {
+                icon: '🐳',
+                title: 'Docker & Containerization Fundamentals',
+                subtitle: 'Beginner to Intermediate • 4 Hours • 6 Modules',
+                desc: 'Containerization is the foundation of modern cloud-native DevOps. This course covers everything from basic container lifecycles to multi-stage Dockerfiles and running multiple interdependent services via Docker Compose.',
+                syllabus: [
+                    'Module 1: Why Containers? Virtual Machines vs Docker Containers',
+                    'Module 2: The Core Lifecycle (docker run, stop, ps, exec, logs)',
+                    'Module 3: Authoring Clean Dockerfiles (FROM, COPY, WORKDIR, EXPOSE, CMD)',
+                    'Module 4: Managing Data Persistence with Named Volumes & Bind Mounts',
+                    'Module 5: Docker Bridge Networking & Inter-container Communication',
+                    'Module 6: Multi-Container Stacks using compose.yaml'
+                ],
+                commands: `# Pull and test an Nginx container\ndocker run -d -p 8080:80 --name my-web nginx:alpine\n\n# Build a custom Docker image\ndocker build -t my-app:v1 .\n\n# Spin up multi-container environment\ndocker compose up -d\n\n# Inspect container logs\ndocker logs -f my-web`
+            },
+            jenkins: {
+                icon: '⚙️',
+                title: 'Jenkins CI/CD Automation Pipelines',
+                subtitle: 'Intermediate • 5.5 Hours • 7 Modules',
+                desc: 'Learn how software teams automatically validate code quality, execute test suites, and deploy releases. You will build production-grade declarative Jenkins pipelines integrated directly with GitHub.',
+                syllabus: [
+                    'Module 1: Introduction to CI/CD Principles & Jenkins Architecture (Controller vs Agents)',
+                    'Module 2: Installing Jenkins via Docker & Configuring Recommended Plugins',
+                    'Module 3: Writing Declarative Jenkinsfiles (pipeline, agent, stages, steps, post)',
+                    'Module 4: Triggering Automated Builds via GitHub Webhooks',
+                    'Module 5: Running Isolated Pipeline Steps inside Docker Containers',
+                    'Module 6: Secure Credential Management for Docker Hub & Cloud Servers',
+                    'Module 7: Automated Notifications & Rollback Strategies'
+                ],
+                commands: `// Example Jenkinsfile (Declarative Pipeline)\npipeline {\n    agent any\n    stages {\n        stage('Build') {\n            steps {\n                sh 'docker build -t my-app:$BUILD_NUMBER .'\n            }\n        }\n        stage('Test') {\n            steps {\n                sh 'docker run --rm my-app:$BUILD_NUMBER npm test'\n            }\n        }\n    }\n}`
+            },
+            jira: {
+                icon: '📋',
+                title: 'Jira & Agile Sprint Management',
+                subtitle: 'Beginner • 3 Hours • 5 Modules',
+                desc: 'Understand how engineering teams manage backlogs, run 2-week agile sprints, track bugs, and connect tickets to automated git branches.',
+                syllabus: [
+                    'Module 1: Agile Frameworks: Scrum vs Kanban Methodologies',
+                    'Module 2: Structuring Work: Initiatives, Epics, Stories, Tasks & Subtasks',
+                    'Module 3: Sprint Planning, Story Points & Backlog Grooming',
+                    'Module 4: Configuring Custom Jira Workflows (To Do -> In Progress -> Code Review -> Done)',
+                    'Module 5: Smart Commits & GitHub Integration (e.g. git commit -m "DEV-3: add home page")'
+                ],
+                commands: `# Link Git commits to your Jira issues:\ngit checkout -b feature/DEV-4-about-page\ngit commit -m "DEV-4 #resolve fixed navbar spacing"\ngit push origin feature/DEV-4-about-page`
+            },
+            kubernetes: {
+                icon: '☸️',
+                title: 'Kubernetes (K8s) Cluster Orchestration',
+                subtitle: 'Advanced • 6.5 Hours • 8 Modules',
+                desc: 'Orchestrate container workloads at scale. Learn how Kubernetes heals crashed containers, performs zero-downtime rolling updates, and manages cluster secrets and ingress.',
+                syllabus: [
+                    'Module 1: K8s Core Components (Control Plane, API Server, etcd, Kubelet)',
+                    'Module 2: Deploying your first Pod and ReplicaSet',
+                    'Module 3: Production Deployments & Zero-Downtime Rolling Updates',
+                    'Module 4: Service Discovery: ClusterIP, NodePort, and LoadBalancers',
+                    'Module 5: ConfigMaps and Kubernetes Secrets Management',
+                    'Module 6: Ingress Controllers and Path-Based Routing',
+                    'Module 7: Introduction to Helm Package Management'
+                ],
+                commands: `# Check cluster status\nkubectl cluster-info\n\n# Apply a deployment\nkubectl apply -f deployment.yaml\n\n# Get running pods & services\nkubectl get pods -o wide\nkubectl get svc\n\n# Check pod logs\nkubectl logs -l app=my-app`
+            },
+            git: {
+                icon: '🐙',
+                title: 'Git & GitHub for DevOps Teams',
+                subtitle: 'Beginner • 3 Hours • 4 Modules',
+                desc: 'Master the collaborative version control habits required in modern engineering teams, including rebase vs merge, protected branch rules, and pull request reviews.',
+                syllabus: [
+                    'Module 1: Git Internals, Working Tree, Index, and HEAD',
+                    'Module 2: Trunk-Based Development vs GitFlow Branching Models',
+                    'Module 3: Resolving Nasty Merge Conflicts & Interactive Rebase',
+                    'Module 4: Branch Protection Rules & GitHub Pull Request Reviews'
+                ],
+                commands: `# Create and switch to new feature branch\ngit checkout -b feature/my-feature\n\n# Interactive rebase of last 3 commits\ngit rebase -i HEAD~3\n\n# Stash uncommitted changes cleanly\ngit stash push -m "wip changes"\ngit stash pop`
+            },
+            linux: {
+                icon: '🐧',
+                title: 'Linux CLI & Shell Automation',
+                subtitle: 'Beginner • 3.5 Hours • 5 Modules',
+                desc: 'The operating system running the cloud. Master systemd daemons, file permissions (chmod/chown), SSH configuration, and writing reliable bash automation scripts.',
+                syllabus: [
+                    'Module 1: Server Navigation, Package Managers (apt, apk), & Permissions',
+                    'Module 2: Managing Daemons & Services with systemctl and journalctl',
+                    'Module 3: SSH Key Authentication, Config Files, & Secure Tunneling',
+                    'Module 4: Automating Recurring Tasks with Cron Jobs',
+                    'Module 5: Writing Production Bash Scripts with error handling (set -e)'
+                ],
+                commands: `#!/usr/bin/env bash\nset -euo pipefail\n\necho "Checking system disk usage:"\ndf -h / | awk 'NR==2 {print $5}'\n\n# Inspect systemd logs for Nginx\njournalctl -u nginx.service -n 50 --no-pager`
+            },
+            terraform: {
+                icon: '🏗️',
+                title: 'Terraform & Infrastructure as Code',
+                subtitle: 'Intermediate • 5 Hours • 6 Modules',
+                desc: 'Never click around in cloud consoles manually. Learn to declare servers, VPCs, and networks as code with HashiCorp HCL.',
+                syllabus: [
+                    'Module 1: The Declarative Paradigm & Terraform Architecture',
+                    'Module 2: Providers, Resources, and Data Sources',
+                    'Module 3: The Terraform Lifecycle: init, plan, apply, destroy',
+                    'Module 4: State Files, Remote Backends (S3/Consul) & State Locking',
+                    'Module 5: Building Reusable Terraform Modules'
+                ],
+                commands: `# Initialize providers\nterraform init\n\n# Preview planned infrastructure changes\nterraform plan\n\n# Apply changes automatically\nterraform apply -auto-approve`
+            },
+            monitoring: {
+                icon: '📊',
+                title: 'Observability: Prometheus & Grafana',
+                subtitle: 'Intermediate • 4 Hours • 5 Modules',
+                desc: 'Learn how to detect outages before customers notice. Collect metrics with Prometheus, scrape node and container data, and craft real-time Grafana dashboards.',
+                syllabus: [
+                    'Module 1: The 3 Pillars of Observability (Metrics, Logs, Traces)',
+                    'Module 2: Prometheus Architecture & Pull-Based Scraping',
+                    'Module 3: Exporting Metrics via Node Exporter and cAdvisor',
+                    'Module 4: Crafting PromQL Queries (rates, histograms, percentiles)',
+                    'Module 5: Designing Production Grafana Dashboards'
+                ],
+                commands: `# Example PromQL query for container CPU rate:\nrate(container_cpu_usage_seconds_total{name="my-web"}[5m]) * 100\n\n# Memory usage percentage:\n(node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes * 100`
+            }
+        };
+
+        // Modal Open / Close logic
+        function openCourseModal(courseKey) {
+            const data = coursesData[courseKey];
+            if (!data) return;
+
+            document.getElementById('modalIcon').innerText = data.icon;
+            document.getElementById('modalTitle').innerText = data.title;
+            document.getElementById('modalSubtitle').innerText = data.subtitle;
+            document.getElementById('modalDesc').innerText = data.desc;
+            document.getElementById('modalCommands').innerText = data.commands;
+
+            const syllabusEl = document.getElementById('modalSyllabus');
+            syllabusEl.innerHTML = '';
+            data.syllabus.forEach((item) => {
+                const row = document.createElement('div');
+                row.className = 'flex items-start text-xs text-slate-700 bg-slate-50 p-2.5 rounded-lg border border-slate-100';
+                row.innerHTML = `<span class="text-indigo-600 font-bold mr-2 mt-0.5">▶</span><span>${item}</span>`;
+                syllabusEl.appendChild(row);
+            });
+
+            document.getElementById('courseModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCourseModal() {
+            document.getElementById('courseModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on click outside
+        document.getElementById('courseModal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeCourseModal();
+            }
+        });
+
+        // Search & Filter Logic
+        const searchInput = document.getElementById('courseSearch');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const courseCards = document.querySelectorAll('.course-card');
+        const noResults = document.getElementById('noResults');
+
+        let activeCategory = 'all';
+
+        function filterCourses() {
+            const query = searchInput.value.toLowerCase().trim();
+            let visibleCount = 0;
+
+            courseCards.forEach(card => {
+                const category = card.dataset.category;
+                const title = card.dataset.title.toLowerCase();
+                const textContent = card.innerText.toLowerCase();
+
+                const matchesCategory = (activeCategory === 'all' || category === activeCategory);
+                const matchesQuery = (!query || title.includes(query) || textContent.includes(query));
+
+                if (matchesCategory && matchesQuery) {
+                    card.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            if (visibleCount === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-indigo-600', 'text-white', 'shadow-sm');
+                    b.classList.add('bg-slate-100', 'text-slate-600');
+                });
+                btn.classList.add('active', 'bg-indigo-600', 'text-white', 'shadow-sm');
+                btn.classList.remove('bg-slate-100', 'text-slate-600');
+
+                activeCategory = btn.dataset.category;
+                filterCourses();
+            });
+        });
+
+        searchInput.addEventListener('input', filterCourses);
+
+        function resetFilters() {
+            searchInput.value = '';
+            const allBtn = document.querySelector('[data-category="all"]');
+            if (allBtn) allBtn.click();
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

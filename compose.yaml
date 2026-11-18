@@ -1,0 +1,17 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: devops-web
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+  course:
+    image: nginx:alpine
+    container_name: course-web
+    volumes:
+      - ./course:/usr/share/nginx/html:ro
+    ports:
+      - "8081:80"
+    restart: unless-stopped
