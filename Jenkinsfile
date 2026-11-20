@@ -1,46 +1,80 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage('Checkout Source Code'){
-            steps{
+
+    options {
+        skipDefaultCheckout(true)
+    }
+
+    stages {
+        stage('Checkout Source Code') {
+            steps {
                 checkout scm
-                echo 'Source Code checked out successfully.'
+                echo 'Source code checked out successfully.'
             }
         }
 
-        stage('Validate Project Files'){
-            steps{
+        stage('Validate Project Files') {
+            steps {
                 sh '''
-                echo "Checking Website files..."
+                    echo "Checking website files..."
 
-                test -f index.html
-                test -f about.html
-                test -f contact.html
+                    test -f index.html
+                    test -f about.html
+                    test -f contact.html
+                    test -f Dockerfile
+                    test -f compose.yaml
+                    test -d course
 
-                echo "Checking Docker configuration..."
-
-                test -f Dockerfile
-                test -f compose.yaml
-
-                echo "All required files are present."
+                    echo "All required files are present."
                 '''
             }
         }
 
-        stage('Build Completed'){
-            steps{
-                echo 'CI pipeline completed successfully.'
+        stage('Build Docker Image') {
+            steps {
+                sh '''
+                    echo "Building website Docker image..."
+                    docker compose -p devops build web
+                '''
+            }
+        }
+
+        stage('Deploy Websites') {
+            steps {
+                sh '''
+                    echo "Deploying websites..."
+                    docker compose -p devops up -d
+                '''
+            }
+        }
+
+        stage('Verify Deployment') {
+            steps {
+                sh '''
+                    echo "Verifying website containers..."
+
+                    test "$(docker inspect --format='{{.State.Running}}' devops-web)" = "true"
+                    test "$(docker inspect --format='{{.State.Running}}' course-web)" = "true"
+
+                    docker compose -p devops ps
+
+                    echo "Both websites are running successfully."
+                '''
             }
         }
     }
 
-    post{
-        success{
-            echo 'SUCCESS: your project passed the pipeline'
+    post {
+        success {
+            echo 'SUCCESS: Both websites were deployed successfully!'
         }
 
-        failure{
-            echo 'FAILURE: your project failed the pipeline'
+        failure {
+            echo 'FAILURE: Pipeline failed. Check the Console Output.'
+        }
+
+        always {
+            echo 'Pipeline execution finished.'
         }
     }
 }
